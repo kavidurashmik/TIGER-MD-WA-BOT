@@ -27,7 +27,7 @@ views: ${data.views}
 
 MADE BY KAVIYA_MULTI_DEVICE 🤍
 `
-await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mak});
+await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
 
 //download audio
 
