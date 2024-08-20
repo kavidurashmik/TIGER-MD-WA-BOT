@@ -1,3 +1,4 @@
+
 const {cmd , commands} = require('../command')
 const fg = require('api-dylux')
 const yts = require('yt-search')
@@ -25,7 +26,7 @@ time: ${data.timestamp}
 ago: ${data.ago}
 views: ${data.views}
 
-MADE BY KAVIYA_MULTI_DEVICE 🤍
+💥MADE BY KAVIYA_MULTI_DEVICE💥
 `
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
 
