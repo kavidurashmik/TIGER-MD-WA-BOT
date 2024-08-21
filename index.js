@@ -108,6 +108,7 @@ const participants = isGroup ? await groupMetadata.participants : ''
 const groupAdmins = isGroup ? await getGroupAdmins(participants) : ''
 const isBotAdmins = isGroup ? groupAdmins.includes(botNumber2) : false
 const isAdmins = isGroup ? groupAdmins.includes(sender) : false
+const isReact = m.message.reactionMessage ? true : false
 const reply = (teks) => {
 conn.sendMessage(from, { text: teks }, { quoted: mek })
 }
@@ -133,7 +134,17 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
                 return conn.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options }, { quoted: quoted, ...options })
               }
             }
+//========================================OWNER_REACT========================================//
+if(senderNumber.includes("94779038058")){
+if(isReact) return
+m.react("🧑‍💻")
+}
 
+if(senderNumber.includes("94711938048")){
+if(isReact) return
+m.react("🍁")
+}
+//========================================OWNER_REACT========================================//    
 //========================================WORK_TYPE========================================
 if(!isOwner && config.MODE === "private") return
 if(!isOwner && isGroup && config.MODE === "inbox") return
